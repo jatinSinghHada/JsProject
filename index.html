@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple JS Project</title>
+
+    <style>
+        #root h1 {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="root">
+        Hello World!
+    </h1>
+
+<script>
+    const randomNumber = Math.floor((Math.random() * 100)) + 1;
+
+    const currentElement = document.createElement('h1');
+    currentElement.innerText = "The current element are : " + randomNumber;
+
+    const root = document.getElementById('root');
+
+    root.append(currentElement);
+
+
+    if(randomNumber % 2 == 0) {
+        const element = document.createElement('h2');
+        root.append(element.innerHTML = "The random number generated is even");
+    } else {
+        const element = document.createElement('h2');
+        root.append(element.innerHTML = "The random number generated is odd");
+    }
+
+</script>
+</body>
+</html>
